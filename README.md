@@ -56,14 +56,6 @@ There are several ways that this script could be improved in the future:
         * Implement a multiplayer option to allow players to play against each other over the internet.
         * Add the ability to undo moves or take back turns.
 
-
-## Authors
-
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
 ## Version History
 
 * 0.1
