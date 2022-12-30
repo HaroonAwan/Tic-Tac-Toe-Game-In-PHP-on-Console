@@ -60,3 +60,15 @@ There are several ways that this script could be improved in the future:
 
 * 0.1
     * Initial Release
+
+
+# Refrences
+
+ex. [README.md Template](https://gist.github.com/heiswayi/350e2afda8cece810c0f6116dadbe651)
+ex. [Arrays in PHP](https://www.php.net/manual/en/language.types.array.php)
+ex. [control-structures.while](https://www.php.net/manual/en/control-structures.while.php)
+ex. [control-structures.for](https://www.php.net/manual/en/control-structures.for.php)
+ex. [functions.user-defined](https://www.php.net/manual/en/functions.user-defined.php)
+ex. [language.variables.scope](https://www.php.net/manual/en/language.variables.scope.php)
+
+
