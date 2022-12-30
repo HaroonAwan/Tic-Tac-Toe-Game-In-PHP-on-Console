@@ -83,3 +83,87 @@ function getMove() {
       echo "Invalid move, try again.\n";
     }
   }
+
+// Function to update the board with the user's move
+function updateBoard(&$board, $move, $player) {
+  // Get the row and column from the move array
+  $row = $move[0];
+  $col = $move[1];
+  // Update the board with the player's symbol
+  $board[$row][$col] = $player;
+}
+
+// Function to check if the game is over
+function isGameOver($board) {
+  // Check if there is a winner
+  if (isWinner($board)) {
+    return true;
+  }
+  // Check if the board is full
+  if (isBoardFull($board)) {
+    return true;
+  }
+  // Otherwise, the game is not over
+  return false;
+}
+
+// Function to check if there is a winner
+// Function to check if there is a winner
+function isWinner($board) {
+    // Check the rows for a winner
+    for ($i = 0; $i < 3; $i++) {
+      if ($board[$i][0] == $board[$i][1] && $board[$i][1] == $board[$i][2] && $board[$i][0] != '-') {
+        return true;
+      }
+    }
+  
+    // Check the columns for a winner
+    for ($i = 0; $i < 3; $i++) {
+      if ($board[0][$i] == $board[1][$i] && $board[1][$i] == $board[2][$i] && $board[0][$i] != '-') {
+        return true;
+      }
+    }
+  
+    // Check the diagonals for a winner
+    if ($board[0][0] == $board[1][1] && $board[1][1] == $board[2][2] && $board[0][0] != '-') {
+      return true;
+    }
+    if ($board[0][2] == $board[1][1] && $board[1][1] == $board[2][0] && $board[0][2] != '-') {
+      return true;
+    }
+  
+    // If no winner was found, return false
+    return false;
+  }
+  
+
+
+  // Function to check if the board is full
+function isBoardFull($board) {
+    // Loop through the rows
+    for ($i = 0; $i < 3; $i++) {
+      // Loop through the columns
+      for ($j = 0; $j < 3; $j++) {
+        // If there is an empty cell, the board is not full
+        if ($board[$i][$j] == '-') {
+          return false;
+        }
+      }
+    }
+    // If no empty cells were found, the board is full
+    return true;
+  }
+  
+
+  // Function to announce the result of the game
+function announceResult($board) {
+    // Check if there is a winner
+    if (isWinner($board)) {
+      // Announce the winner
+      echo "Congratulations, you won!\n";
+    } else {
+      // Otherwise, the game is a tie
+      echo "The game is a tie.\n";
+    }
+  }
+  
